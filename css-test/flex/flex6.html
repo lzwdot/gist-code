@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 内联与块的上下左右居中布局</title>
+</head>
+
+<body>
+    <!-- 内联与块的上下左右居中布局 -->
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .box1 {
+            line-height: 100px;
+        }
+
+        .box2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .box3 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        .box4 {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+
+    <div class="box box1">
+        单行文字
+        <code>line-height:10px</code>
+    </div>
+    <div class="box box2">
+
+        <pre>
+多行文字 
+            display: flex;
+            align-items: center;
+        </pre>
+    </div>
+    <div class="box box3">
+        <pre>
+多行文字 
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        </pre>
+    </div>
+    <div class="box box4">
+        <pre>
+多行文字            
+            display: table-cell;
+            vertical-align: middle;
+        </pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 - 知乎导航</title>
+</head>
+
+<body>
+    <link href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'iconfont';
+            /* Project id 3183629 */
+            src: url('//at.alicdn.com/t/font_3183629_i6eba6wxxdo.woff2?t=1644896360176') format('woff2'),
+                url('//at.alicdn.com/t/font_3183629_i6eba6wxxdo.woff?t=1644896360176') format('woff'),
+                url('//at.alicdn.com/t/font_3183629_i6eba6wxxdo.ttf?t=1644896360176') format('truetype');
+        }
+
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .header-container {
+            background-color: #fff;
+        }
+
+        .header-wrapper {
+            margin: 0 auto;
+            height: 52px;
+            min-width: 1000px;
+            max-width: 1156px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo {
+            margin-right: 40px;
+        }
+
+        .header-logo a {
+            font-size: 45px;
+            font-family: iconfont;
+            text-decoration: none;
+        }
+
+        .header-nav {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .header-nav li {
+            margin-right: 30px;
+        }
+
+        .header-search {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-search .wrapper {
+            max-width: 482px;
+            height: 34px;
+            display: flex;
+            flex-grow: 1;
+            background-color: #f6f6f6;
+            border-radius: 100px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-search input {
+            border: none;
+            background: none;
+            margin: 0 20px;
+            flex-grow: 1;
+        }
+
+        .header-search .icon {
+            font-family: iconfont;
+            margin-right: 20px;
+        }
+
+        .header-btn {
+            display: flex;
+        }
+
+        .header-btn .login {
+            width: 60px;
+            height: 32px;
+            border: 1px #0066ff solid;
+            border-radius: 3px;
+            color: #0066ff;
+            background: none;
+            cursor: pointer;
+            display: block;
+            margin-left: 20px;
+        }
+
+        .header-btn .join {
+            width: 90px;
+            height: 32px;
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            display: block;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <a href="#">&#xe641;</a>
+            </div>
+            <ul class="header-nav">
+                <li>首页</li>
+                <li>会员</li>
+                <li>发现</li>
+                <li>等你来答</li>
+            </ul>
+            <div class="header-search">
+                <div class="wrapper">
+                    <input type="text" placeholder="搜索">
+                    <span class="icon">&#xe600;</i>
+                </div>
+            </div>
+            <div class="header-btn">
+                <button class="login">登录</button>
+                <button class="join">进入知乎</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

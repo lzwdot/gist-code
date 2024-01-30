@@ -1,0 +1,14 @@
+<%- include('./../partials/_header.html',{title:message}) %>
+
+<section class="error-page mx-auto mt-5">
+  <h2 class="headline text-warning"><%= status %></h2>
+  <div class="error-content">
+    <h3>
+      <i class="fas fa-exclamation-triangle text-warning"></i><%= message %>
+      found.
+    </h3>
+    <pre><%= stack %></pre>
+  </div>
+</section>
+
+<%- include('./../partials/_footer.html') %>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 两列三列布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            height: 500px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+        }
+
+        .box1 {
+            display: flex;
+        }
+
+        .box1 .col1 {
+            width: 100px;
+            background-color: pink;
+        }
+
+        .box1 .col2 {
+            flex-grow: 1;
+            background-color: green;
+        }
+
+        .box1 .col3 {
+            width: 200px;
+            background-color: tomato;
+        }
+
+        .box2 .col1 {
+            width: 100px;
+            height: 100%;
+            float: left;
+            background-color: pink;
+        }
+
+        .box2 .col2 {
+            height: 100%;
+            background-color: green;
+            overflow: hidden;
+        }
+    </style>
+
+    <div class="box box1">
+        <div class="col1">
+            width:100px
+        </div>
+        <div class="col2">
+            <pre>
+            display: flex;        
+            flex-grow: 1;
+            </pre>
+        </div>
+        <div class="col3">
+            width: 200px;
+        </div>
+    </div>
+    <div class="box box2">
+        <div class="col1">
+            width:100px;
+            float: left;
+        </div>
+        <div class="col2">
+            <pre>
+                overflow: hidden;
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

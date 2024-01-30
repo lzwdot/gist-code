@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 主轴对齐</title>
+</head>
+
+<body>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: space-around; /*主轴对齐*/
+        }
+
+        .main div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            font-size: 20x;
+        }
+    </style>
+
+    <div class="main">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

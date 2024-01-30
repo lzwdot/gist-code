@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="container"></div>
+<script>
+  let total = 100000
+  let timer = Date.now()
+  // 新版浏览器优化，当 js 执行完成后一并插入到页面
+  let index = 0 // 偏移量
+  let id = 0 // 递增的内容
+  function load() {
+    index += 50
+    if (index < total) {
+      // setTimeout 和 requestAnimationFrame 都是宏任务
+      // requestAnimationFrame 可以配合浏览器的刷新频率，效果可能好点
+      setTimeout(() => { // 分片渲染，因为定时器是一个宏任务，会等待 ui 渲染完成后执行
+        let fragment = document.createDocumentFragment() // ie 浏览器 需要使用文档碎片
+        // 先渲染 50 个，等待渲染完成后，再渲染 50 个
+        for (let i = 0; i < 50; i++) {
+
+          let li = document.createElement('li')
+          li.innerHTML = id++
+          fragment.appendChild(li)
+        }
+        container.appendChild(fragment)
+        load()
+      }, 0)
+    }
+  }
+
+  load()
+  // 分片加载 会导致页面 dom 元素过多，造成页面的卡顿
+  // 虚拟列表优化，只渲染当前的可视化区域
+</script>
+</body>
+</html>

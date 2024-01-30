@@ -1,0 +1,66 @@
+<%- include('./../partials/_header.html',{title:<%=__('Sign up')%>}) %>
+
+<section class="row mt-5">
+  <div class="col-4 m-auto">
+      <p class="mb-3 text-body-secondary"><%=__('Sign up')%></p>
+      <form action="/auth/signup" method="post">
+        <%- include('./../partials/_flash.html') %>
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="<%=__('Username')%>"
+            name="userLogin"
+            value="<%= userLogin %>"
+          />
+          <div class="input-group-text">
+            <span class="bi bi-person"></span>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="<%=__('Email')%>"
+            name="userEmail"
+            value="<%= userEmail %>"
+          />
+          <div class="input-group-text">
+            <span class="bi bi-envelope"></span>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="<%=__('Password')%>"
+            name="userPass"
+          />
+          <div class="input-group-text">
+            <span class="bi bi-lock-fill"></span>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="<%=__('Confirm password')%>"
+            name="rePassword"
+          />
+          <div class="input-group-text">
+            <span class="bi bi-lock-fill"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary"><%=__('Sign up')%></button>
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+</section>
+
+<%- include('./../partials/_footer.html') %>

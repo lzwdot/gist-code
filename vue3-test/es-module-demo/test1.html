@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>es module demo</title>
+</head>
+<body>
+<p>基本演示</p>
+
+<script type="module">
+  import add from './src/add.js'
+
+  const res = add(1, 2)
+  console.log('res add', res)
+  // print add
+  // res add 3
+</script>
+
+<script type="module">
+  import {add, multi} from "./src/math.js";
+
+  console.log('res add', add(2, 3)) // res add 5
+  console.log('res multi', multi(2, 3)) // res multi 6
+</script>
+</body>
+</html>

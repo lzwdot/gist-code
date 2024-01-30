@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 溢出项布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: skyblue;
+        }
+
+        .box1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .box1 div {
+            width: 100px;
+            height: 80px;
+            background-color: pink;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .box2 section{
+            /* 这个宽度需要计算，这里随便设置的*/
+            width: 2000px;
+        }
+
+        .box2 div{
+            float: left;
+            width: 100px;
+            height: 80px;
+            background-color: pink;
+            margin-right: 10px;
+        } 
+    </style>
+
+    <div class="box box1">
+        <div>flex1</div>
+        <div>flex2</div>
+        <div>flex3</div>
+        <div>flex4</div>
+        <div>flex5</div>
+        <div>flex6</div>
+        <div>flex7</div>
+    </div>
+
+    <div class="box box2">
+        <section>
+            <div>float1</div>
+            <div>float2</div>
+            <div>float3</div>
+            <div>float4</div>
+            <div>float5</div>
+            <div>float6</div>
+            <div>float7</div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 收缩比例</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .box1 div {
+            width: 600px;
+            height: 100px;
+            background-color: pink;
+            /* 大于等于 1，自动收缩，跟容器大小相同 */
+            /* flex-shrink: 2; */
+            /* 为 0 时，不收缩，会溢出 */
+            /* flex-shrink: 0;  */
+            /* 小于 1 时，按比例收缩，500+(600-500)/2=550 */
+            flex-shrink: 0.5;
+        }
+
+        .box2 div:nth-of-type(1) {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /* 默认时为 1 时，按比例收缩，300-(300+400-500)*3/7=214.28571428571428 */
+            /* flex-shrink: 1 */
+            /* 值为 2 时，300-(300+400-500)*(300*2)/(300*2+400*1) = 180 */
+            /* flex-shrink: 2 */
+            /* 值为 0.2 时，300-(300+400-500)*(0.2+0.1)*(300*0.2)/(300*0.2+400*0.1) = 264 */
+            flex-shrink: .2;
+        }
+
+        .box2 div:nth-of-type(2) {
+            width: 400px;
+            height: 100px;
+            background-color: gray;
+            /* 默认时为 1 时，按比例收缩，400-(300+400-500)*4/7=285.7142857142857 */
+            /* flex-shrink: 1 */
+            /* 上面值为 2 时，400-(300+400-500)*(400*1)/(300*2+400*1) = 320 */
+            /* flex-shrink:1 */
+             /* 值为 1.2 时，400-(300+400-500)*(0.2+0.1)*(400*0.1)/(300*0.2+400*0.1) = 376 */
+            flex-shrink: .1;
+        }
+    </style>
+
+    <p>父容器：width: 500px;</p>
+    <div class="box box1">
+        <div>width: 600px;</div>
+    </div>
+    <div class="box box2">
+        <div>width: 300px;</div>
+        <div>width: 400px;</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 定义网格及 fr 单位</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template:
+                "a1 a1 a2"1fr "a1 a1 a2"1fr "a3 a3 a3"1fr / 1fr 1fr 1fr;
+
+            /* 行间隙 */
+            /* grid-row-gap: 20px; */
+            /* 列间隙  */
+            /* grid-column-gap: 30px; */
+
+            /* 两者的缩写 */
+            gap: 20px 30px;
+        }
+
+        .box1 div:nth-of-type(1) {
+            grid-area: a1;
+        }
+
+        .box1 div:nth-of-type(2) {
+            grid-area: a2;
+        }
+
+        .box1 div:nth-of-type(3) {
+            grid-area: a3;
+        }
+
+        .box2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            /* 也支持间隙 */
+            row-gap: 20px;
+            column-gap: 30px;
+        }
+
+        .box2 div {
+            width: 130px;
+            height: 100px;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1 
+           <pre>
+display: grid; 
+gap: 20px 30px;
+           </pre> 
+        </div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="box box2">
+        <div>1
+            <pre>
+display: flex 也支持间隙
+row-gap: 20px;
+column-gap: 30px;
+            </pre>
+        </div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>

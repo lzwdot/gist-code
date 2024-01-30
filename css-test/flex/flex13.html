@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - flex-basis（主轴大小）与 flex（缩写）</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .box div {
+            background-color: pink;
+        }
+
+        .box1 div {
+            width: 100px;
+            height: 100px;
+
+            /* 设置主轴大小，覆盖 width 值 */
+            flex-basis: 200px;
+        }
+
+        .box1 {
+            /* 设置交叉轴大小，覆盖 height 值 */
+            flex-direction: column;
+        }
+
+        .box2 {
+            align-items: flex-start;
+        }
+
+        .box2 div {
+            flex-basis: 0;
+            /* 0 auto 100% 200px*/
+        }
+
+        .box3 {
+            align-items: flex-start;
+        }
+
+        .box3 div {
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0%; */
+            /* flex: 1; */
+
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 0%; */
+            /* flex: 0; */
+
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto; */
+            /* flex: auto */
+
+            /* flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 50%; */
+            flex: 1 0 50%
+        }
+    </style>
+
+    <div class="box box1">
+        <div>
+            <pre>
+width: 100px;
+height: 100px
+            </pre>
+        </div>
+    </div>
+    <div class="box box2">
+        <div>
+            flex-basis: 0
+        </div>
+    </div>
+    <div class="box box3">
+        <div>
+            flex 缩写
+        </div>
+    </div>
+</body>
+
+</html>

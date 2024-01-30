@@ -1,0 +1,27 @@
+@import "@/el-tree2/styles/common/var.scss";
+@import "@/el-tree2/styles/mixins/mixins.scss";
+
+@include b(tree) {
+    @include e(content) {
+        display: flex;
+        align-items: center;
+    }
+    @include e(checkbox) {
+        margin-right: 4px;
+    }
+    @include e(expand-icon) {
+        cursor: pointer;
+        margin-right: 4px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+        &.expanded {
+            transform: rotate(90deg);
+        }
+        @include when(leaf) {
+            cursor: default;
+            .vl-icon__caret-right {
+                color: transparent;
+            }
+        }
+    }
+}

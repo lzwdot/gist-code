@@ -1,0 +1,13 @@
+<textarea
+  class="visually-hidden"
+  id="editor-content"
+  name="<%= name %>"
+  data-type="<%= type %>"
+  data-id="<%= id %>"
+  data-content="<%= locals.content || '' %>"
+  required
+></textarea>
+<div id="editor-container"></div>
+<div class="invalid-feedback"><%= __('Required') %></div>
+
+<script src="<%=baseUrl%>/assets/js/editor.js"></script>

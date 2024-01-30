@@ -1,0 +1,10 @@
+.container {
+  max-width: 1024px;
+}
+
+/* fix toastui-editor bug */
+.ProseMirror-widget{
+  display: initial;
+  background-color: transparent;
+  cursor: initial;
+}

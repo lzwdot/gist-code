@@ -1,0 +1,30 @@
+<%- include('./../partials/_header.html',{title:__('Edit post')}) %>
+
+<section class="row my-5">
+  <div class="col-10 m-auto">
+      <form action="/post/<%= postId %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <div class="card-body">
+          <%- include('./../partials/_flash.html') %>
+
+          <div class="mb-3">
+            <div class="input-group">              
+              <input name="postTitle" class="form-control w-75" value="<%= postTitle %>"/>
+            </div>
+            <div class="form-text"><%= __('Enter text') %></div>
+          </div>
+          <div class="mb-3">
+            <%- include('./../partials/_editor.html',{name:'postText',content:postText,type:'post',id:postId}) %>
+          </div>
+          <div class="mb-3">
+            <input name="postTags" class="form-control" data-bs-toggle="tags" value="<%= postTags %>"/>
+          </div>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary"><%= __('Submit') %></button>
+        </div>
+      </form>
+  </div>
+</section>
+
+<%- include('./../partials/_footer.html') %>

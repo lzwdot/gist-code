@@ -1,0 +1,7 @@
+<!--pages/test/test.wxml-->
+<text>测试页</text>
+<button type="primary" bindtap="toBack">返回</button>
+
+<button bindtap="openMap">打开地图</button>
+
+<button bindtap="getSteps">获取微信步数</button>

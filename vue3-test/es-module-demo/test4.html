@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>es module demo</title>
+</head>
+<body>
+<p>动态引入</p>
+<button id="btn1">load1</button>
+<button id="btn2">load2</button>
+
+<script type="module">
+  btn1.addEventListener('click', async () => {
+    const add = await import('./src/add.js')
+    console.log(add)
+    // Module {Symbol(Symbol.toStringTag): 'Module'}
+    // default: ƒ add(a, b)
+    //   Symbol(Symbol.toStringTag): "Module"
+    //   get default: ƒ ()
+    //   set default: ƒ ()
+    const res = add.default(1, 2)
+    console.log('res add', res)
+    // print add
+    // res add 3
+  })
+  btn2.addEventListener('click', async () => {
+    const {add} = await import('./src/math.js')
+    console.log(add)
+    // ƒ add(a, b) {
+    //   return a + b
+    // }
+    const res = add(1, 2)
+    console.log('res add', res) // res add 3
+  })
+</script>
+</body>
+</html>

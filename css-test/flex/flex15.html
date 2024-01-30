@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 等高布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 500px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+        }
+
+        .box div {
+            width: 100px;
+            background-color: pink;
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box2 {
+            overflow: hidden;
+        }
+
+        .box2 div {
+            float: left;
+
+            /* 实现等高技巧 */
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+        }
+
+        .box2 div:nth-of-type(2) {
+            width: 200px;
+            float: right;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>
+            <p>flex 等高</p>
+            <p>测试文字</p>
+            <p>测试文字</p>
+            <p>测试文字</p>
+        </div>
+        <div>
+            <p>flex 等高</p>
+        </div>
+    </div>
+    <div class="box box2">
+        <div>
+            <p>float:left</p>           
+        </div>
+        <div>
+            <p>float:right</p>
+            <pre>
+实现等高技巧
+margin-bottom: -2000px;
+padding-bottom: 2000px;
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+$bootstrap-icons-font-dir: 'bootstrap-icons/font/fonts';
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1000px,
+  xxl: 1024px,
+);
+
+@import 'bootstrap';
+@import 'bootstrap-icons';
+@import 'editor.scss';
+@import '@yaireo/tagify/src/tagify.scss';
+
+body {
+  font-size: 14px;
+
+  main {
+    min-height: 80vh;
+  }
+}

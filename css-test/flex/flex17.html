@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - Sticky Footer布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            min-height: 100vh;
+            margin-bottom: 10px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box1 .header {
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box1 .content {
+            flex-grow: 1;
+        }
+
+        .box1 .footer {
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+
+    <div class="box box1">
+        <div class="header">
+            height: 100px;
+        </div>
+        <div class="content">
+            flex-grow: 1;
+        </div>
+        <div class="footer">
+            height: 100px;
+        </div>
+    </div>
+</body>
+
+</html>

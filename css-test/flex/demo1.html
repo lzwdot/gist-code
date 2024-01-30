@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实例 - swiper 轮播图</title>
+</head>
+
+<body>
+    <link href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'iconfont';
+            /* project id 3183629 */
+            src: url('');
+            src: url('?#iefix') format('embedded-opentype'),
+                url('//at.alicdn.com/t/font_3183629_mh80pc7g0vo.woff2') format('woff2'),
+                url('//at.alicdn.com/t/font_3183629_mh80pc7g0vo.woff') format('woff'),
+                url('//at.alicdn.com/t/font_3183629_mh80pc7g0vo.ttf') format('truetype'),
+                url('#iconfont') format('svg');
+        }
+
+        .swiper-container {
+            position: relative;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            height: 28px;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #c6bdb0;
+            margin: 0 4px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: white;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            font-family: iconfont;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 45px;
+            color: white;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    </style>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img
+                    src="https://i.picsum.photos/id/789/1242/698.jpg?hmac=BpdGuU8efxoT826rC0WO_5Ab_WjqecVBoJ4KvrKLJ8E"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://i.picsum.photos/id/113/1242/698.jpg?hmac=RVFVw7fKV1TPLaUfOqDMNRUSJqYSNc1tAccd5gARklE"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://i.picsum.photos/id/104/1242/698.jpg?hmac=dFVAQHPi5LpWp4R1g9X3p8XwaCykcoD_9jFDw2H4c9w"
+                    alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+        </div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev">&#xe660;</div>
+        <div class="swiper-button-next">&#xe65f;</div>
+    </div>
+
+</body>
+
+</html>

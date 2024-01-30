@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "ES6",
+    "moduleResolution": "Node",
+    "skipLibCheck": true
+  },
+  "include": ["src/assets/**/*.ts"]
+}

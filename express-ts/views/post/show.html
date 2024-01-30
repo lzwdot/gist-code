@@ -1,0 +1,59 @@
+<%- include('./../partials/_header.html',{title:__('Edit post')}) %>
+
+<section class="row my-5">
+  <div class="col-10 m-auto">
+    <article>
+      <h2 class="display-5 link-body-emphasis mb-1"><%= postTitle %></h2>
+      <p class="blog-post-meta"><%= createdAt %> <a href="#">Mark</a></p>
+      <div id="editor-viewer" data-content="<%= postText %>">
+        <p class="placeholder-glow">
+          <span class="placeholder col-8"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+        </p>
+      </div>
+    </article>
+
+    <div class="list-group">
+      <%(locals.replys || []).forEach(reply => { %>
+      <a
+        href="#"
+        class="list-group-item list-group-item-action"
+        aria-current="true"
+      >
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">
+            <%=reply.replyAuthor %> <% if(reply.reply){ %> <%= __('Reply')
+            %> <%=reply.reply.replyAuthor %> <% } %>
+          </h5>
+          <small><%=reply.createdAt %></small>
+        </div>
+        <p class="mb-1"><%=reply.replyText %></p>
+      </a>
+      <% }); %>
+    </div>
+
+    <form
+      action="/reply/<%= postId %>"
+      method="post"
+      class="needs-validation"
+      novalidate
+    >
+      <%- include('./../partials/_flash.html') %>
+      <div class="mb-3">
+        <textarea class="form-control" name="replyText" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">
+          <%= __('Reply') %>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script src="<%=baseUrl%>/assets/js/editor.js"></script>
+
+<%- include('./../partials/_footer.html') %>

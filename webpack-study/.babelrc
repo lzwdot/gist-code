@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      '@babel/preset-env',
+      // 只做语法转换，es6+ -> es5
+      {
+        "targets": {
+          // 类似 browserslist 可以写成  "targets": "> 0.25%, not dead"
+          "edge": '17',
+          "firefox": '60',
+          "chrome": '67',
+          "safari": '11'
+        },
+        "corejs": 2,
+        // 新版本需要指定核心库版本，3.x 版本太大了
+        "useBuiltIns": 'usage'
+        // 按需加载 entry/usage/false
+      }
+    ],
+    "@babel/preset-react"
+  ]
+}

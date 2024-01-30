@@ -1,0 +1,21 @@
+/* 图标样式 */
+[class^="vl-icon"] {
+    display: block;
+}
+@include b(icon) {
+    @include e(caret-right) {
+        position: relative;
+        color: #a8abb2;
+        width: 10px;
+        height: 10px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-25%);
+            border: 5px solid transparent;
+            border-left-color: currentColor;
+        }
+    }
+}

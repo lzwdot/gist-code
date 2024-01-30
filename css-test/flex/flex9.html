@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - 不定项居中布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            height: 150px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+
+        }
+
+        .box div {
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px;
+        }
+
+        .box2 {
+            width: 500px;
+            padding: 0 20px;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .box2 section {
+            width: 600px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .box2 div {
+            float: left;
+            margin-right: 77px;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="box box2">
+        <section>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </section>
+    </div>
+</body>
+
+</html>

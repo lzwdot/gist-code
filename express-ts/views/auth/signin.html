@@ -1,0 +1,51 @@
+<%- include('./../partials/_header.html',{title:__('Sign in')}) %>
+
+<section class="row mt-5">
+  <div class="col-4 m-auto">
+    <p class="mb-3 text-body-secondary"><%=__('Username or email')%></p>
+    <form action="/auth/signin" method="post">
+      <%- include('./../partials/_flash.html') %>
+
+      <div class="input-group mb-3">
+        <input
+          name="userLogin"
+          type="text"
+          class="form-control"
+          placeholder="<%=__('Account')%>"
+          value="<%= userLogin %>"
+        />
+        <div class="input-group-text">
+          <span class="bi bi-person-fill"></span>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input
+          name="userPass"
+          type="password"
+          class="form-control"
+          placeholder="<%=__('Password')%>"
+        />
+        <div class="input-group-text">
+          <span class="bi bi-lock-fill"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary"><%=__('Sign in')%></button>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="d-grid gap-2">
+            <a href="/auth/signup" role="button" class="btn btn-secondary">
+              <%=__('Sign up')%>
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include('./../partials/_footer.html') %>

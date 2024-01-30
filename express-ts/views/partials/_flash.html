@@ -1,0 +1,7 @@
+<% if (flash) { %>
+<ul class="alert alert-<%= flash.type %>" role="alert">
+  <% (flash.messages || []).forEach(msg => { %>
+  <li><%= msg %></li>
+  <% }); %>
+</ul>
+<% } %>

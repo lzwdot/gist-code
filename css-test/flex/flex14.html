@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局 - flex-basis（主轴大小）与 flex（缩写）</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box1 div:nth-of-type(1) {
+            /* 排最后 */
+            order: 1;
+        }
+
+        .box1 div:nth-of-type(4) {
+            /* 排最前面 */
+            order: -1;
+        }
+
+        .box2 {
+            align-items: center;
+        }
+
+        .box2 div:nth-of-type(4) {
+            width: 200px;
+            height: 50px;
+            /* 默认值 auto 时，跟随父容器 */
+            align-self: flex-start;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1 order: 1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4 order: -1</div>
+    </div>
+    <div class="box box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4 align-self: flex-start</div>
+    </div>
+</body>
+
+</html>

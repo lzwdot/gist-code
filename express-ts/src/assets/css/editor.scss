@@ -1,0 +1,41 @@
+@import '@toast-ui/editor/dist/toastui-editor.css';
+@import '@toast-ui/editor/dist/toastui-editor-viewer.css';
+@import 'tributejs/dist/tribute.css';
+
+.toastui-editor-toolbar {
+  height: auto;
+
+  .toastui-editor-md-tab-container {
+    height: auto;
+
+    .toastui-editor-tabs {
+      margin-left: 0;
+      .tab-item {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .toastui-editor-defaultUI-toolbar {
+    height: auto;
+    padding: 0 5px;
+    justify-content: end;
+
+    .toastui-editor-toolbar-group {
+      height: 33px;
+      button {
+        background: none !important;
+        margin: 0 5px;
+        margin-top: 1px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+
+      .toastui-editor-toolbar-divider {
+        margin: 7px 5px;
+      }
+    }
+  }
+}

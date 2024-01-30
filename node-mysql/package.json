@@ -1,0 +1,18 @@
+{
+  "name": "node-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mysql.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.3",
+    "vuepress-plugin-to-wordpress": "^1.0.0-beta.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>es module demo</title>
+</head>
+<body>
+<p>远程引用</p>
+
+<script type="module">
+  import {createStore} from 'https://unpkg.com/redux@4.1.2/es/redux.mjs';
+
+  console.log('createStore', createStore)
+  // createStore ƒ i(n,f,u){var c;if("function"==typeof f&&"function"==typeof u||"function"==typeof u&&"function"==typeof arguments[3])throw Error(r(0));if("function"==typeof f&&void 0===u&&(u=f,f=void 0),void 0!==u){i…
+</script>
+</body>
+</html>

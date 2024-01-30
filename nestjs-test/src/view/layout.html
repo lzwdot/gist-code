@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}{{name}}</title>
+
+  <!-- style -->
+  <link rel="stylesheet" href="/public/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <!-- #extend "styles" -->
+  {{{block "styles"}}}
+</head>
+
+<body class="bg-white">
+  <!-- header -->
+  <!-- {{ header}} -->
+  <header class="border-bottom">
+    <div class="container">
+      <div class="d-flex align-items-center py-2">
+        <a href="/" class="text-decoration-none text-dar">
+          <img style="height: 2rem;" src="/public/favicon.ico">
+          <span>{{name}}</span>
+        </a>
+
+        <!-- navbar -->
+        <nav class="ms-auto">
+          <a class="text-decoration-none" href="#">关于</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-light">
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-9">{{{body}}}</div>
+        <div class="col-3">
+
+          <!-- {{ sidebar}} -->
+          <aside class="bg-white p-2">
+            在这里你可以：
+            <ul>
+              <li>向别人提出你遇到的问题</li>
+              <li>帮助遇到问题的人</li>
+              <li>分享自己的知识</li>
+              <li>和其它人一起进步</li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <!-- {{ footer}} -->
+  <footer class="border-top">
+    <div class="container">
+      <div class="py-4">Copyright © 2022-present Lzw.</div>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="/public/libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/public/libs/axios/axios.min.js"></script> 
+  <!-- #extend "scripts" -->
+  {{{block "scripts"}}}
+   <script src="/public/js/main.js"></script>
+</body>
+
+</html>
